@@ -8,8 +8,8 @@ pygame.init()
 # Load two videos
 default = mp.VideoFileClip("default.mp4")
 video1 = mp.VideoFileClip("video1.mp4")
-video2 = mp.VideoFileClip("video3.mp4")
-video2 = video2.resize(newsize=(1920, 1080))
+video2 = mp.VideoFileClip("video2.mp4")
+#video2 = video2.resize(newsize=(1920, 1080))
 
 screen_info = pygame.display.Info()
 screen_width = screen_info.current_w
