@@ -9,8 +9,12 @@ pygame.init()
 video1 = mp.VideoFileClip("video1.mp4")
 video2 = mp.VideoFileClip("video2.mp4")
 
+screen_info = pygame.display.Info()
+screen_width = screen_info.current_w
+screen_height = screen_info.current_h
+
 # Set up Pygame display with the size of the first video
-screen = pygame.display.set_mode(video1.size)
+screen = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
 
 # Clock to control frame rate
 clock = pygame.time.Clock()
