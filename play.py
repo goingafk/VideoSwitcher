@@ -10,6 +10,7 @@ player = instance.media_player_new()
 def play_video():
     media = instance.media_new(videoPath)
     player.set_media(media)
+    player.set_fullscreen(True)
     player.play()
 
 play_video()
