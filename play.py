@@ -16,7 +16,13 @@ def play_video():
 play_video()
 
 while True:
-    state = player.get_state()
-    if state == vlc.State.Ended:
-        play_video()
+    command = input().lower()
+
+    if(command=='p'):
+        player.pause()
+    elif(command=='r'):
+        player.play()
+    elif(command=='s'):
+        player.stop()
+        break
     time.sleep(1)
