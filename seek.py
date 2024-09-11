@@ -51,10 +51,12 @@ def LoopVideoSegment(video_path):
             if(keyboard.is_pressed('esc')):
                 player.stop()
                 sys.exit(0)
+
             elif(keyboard.is_pressed('1')):
                 startTime = video1StartTime
                 endTime = video1EndTime
                 player.set_time(startTime)
+                
             elif(keyboard.is_pressed('2')):
                 startTime = video2StartTime
                 endTime = video2EndTime
