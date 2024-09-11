@@ -28,14 +28,17 @@ def HandleKeypress():
         if keyboard.is_pressed('1'):
             currentVideo = defaultVideo
             PlayVideo(currentVideo)
+            time.sleep(0.2)
         
         elif keyboard.is_pressed('2'):
             currentVideo = video1
             PlayVideo(currentVideo)
+            time.sleep(0.2)
         
         elif keyboard.is_pressed('3'):
             currentVideo = video2
             PlayVideo(currentVideo)
+            time.sleep(0.2)
         
         elif keyboard.is_pressed('esc'):
             player.stop()
