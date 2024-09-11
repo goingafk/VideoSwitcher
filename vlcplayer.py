@@ -35,5 +35,5 @@ def handle_keypress():
         time.sleep(0.1)
 
 
-play_video(video1_path)
+play_video(default_path)
 handle_keypress()
