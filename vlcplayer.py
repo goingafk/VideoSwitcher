@@ -3,7 +3,7 @@ import keyboard
 import time
 import sys
 
-instance = vlc.instance()
+instance = vlc.Instance()
 
 player = instance.media_player_new()
 
