@@ -10,21 +10,21 @@ instance = vlc.Instance()
 player = instance.media_player_new()
 
 # Define the video path and time range (in milliseconds)
-video_path = 'video.mp4'
-v1_start = 1000
-v1_end = 3000
+videoPath = 'video.mp4'
+video1StartTime = 1000
+video1EndTime = 3000
 
-v2_start = 5000
-v2_end = 7000
+video2StartTime = 5000
+video2EndTime = 7000
 
 
-# Function to loop a video segment between start_time and end_time
-def loop_video_segment(video_path, start_time, end_time):
+# Function to loop a video segment between startTime and endTime
+def LoopVideoSegment(video_path):
 
-    global v1_start, v2_start, v1_end, v2_end
+    global video1StartTime, video2StartTime, video1EndTime, video2EndTime
 
-    start_time = v1_start
-    end_time = v1_end
+    startTime = video1StartTime
+    endTime = video1EndTime
 
     media = instance.media_new(video_path)
     player.set_media(media)
@@ -40,10 +40,10 @@ def loop_video_segment(video_path, start_time, end_time):
     while True:
         
         # Set the player to the start time (in milliseconds)
-        player.set_time(start_time)
+        player.set_time(startTime)
 
         # Continuously check the current playback time
-        while player.get_time() < end_time:
+        while player.get_time() < endTime:
             current_time = player.get_time()
             #print(f"Current time: {current_time / 1000} seconds")  # Show time in seconds
             time.sleep(0.05)  # Small delay to prevent excessive CPU usage
@@ -52,21 +52,17 @@ def loop_video_segment(video_path, start_time, end_time):
                 player.stop()
                 sys.exit(0)
             elif(keyboard.is_pressed('1')):
-                start_time = v1_start
-                end_time = v1_end
-                player.set_time(start_time)
+                startTime = video1StartTime
+                endTime = video1EndTime
+                player.set_time(startTime)
             elif(keyboard.is_pressed('2')):
-                start_time = v2_start
-                end_time = v2_end
-                player.set_time(start_time)
+                startTime = video2StartTime
+                endTime = video2EndTime
+                player.set_time(startTime)
 
-        # Once the end_time is reached, the loop resets the video to the start_time
-        #print(f"Looping back to {start_time / 1000} seconds")
-        player.set_time(start_time)
-
-
-start_time = 1000  # 1 second in milliseconds
-end_time = 5000    # 3 seconds in milliseconds
+        # Once the endTime is reached, the loop resets the video to the startTime
+        #print(f"Looping back to {startTime / 1000} seconds")
+        player.set_time(startTime)
 
 # Loop the video segment from 1 to 3 seconds
-loop_video_segment(video_path, v1_start, v1_end)
+LoopVideoSegment(videoPath)
