@@ -55,24 +55,24 @@ def LoopVideoSegment(video_path):
         while player.get_time() < endTime:
             time.sleep(0.05)  # Small delay to prevent excessive CPU usage
 
-            if (keyboard.is_pressed('o')):
+            if (keyboard.is_pressed('q')):
                 player.stop()
                 sys.exit(0)
 
-            elif (keyboard.is_pressed('h')):
+            elif (keyboard.is_pressed('w')):
                 startTime = video1StartTime
                 endTime = video1EndTime
                 player.set_time(startTime)
 
-            elif (keyboard.is_pressed('i')):
+            elif (keyboard.is_pressed('e')):
                 startTime = video2StartTime
                 endTime = video2EndTime
                 player.set_time(startTime)
             
-            elif (keyboard.is_pressed('j')):
+            elif (keyboard.is_pressed('r')):
                 pass # Add logic for key-press
 
-            elif (keyboard.is_pressed('g')):
+            elif (keyboard.is_pressed('t')):
                 pass # Add logic for key-press
 
         # Once the endTime is reached, the loop resets the video to the startTime
