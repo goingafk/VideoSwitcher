@@ -75,7 +75,6 @@ def LoopVideoSegment(video_path):
                 pass # Add logic for key-press
 
         # Once the endTime is reached, the loop resets the video to the startTime
-        #print(f"Looping back to {startTime / 1000} seconds")
         player.set_time(startTime)
 
 # Loop the video segment from 1 to 3 seconds
