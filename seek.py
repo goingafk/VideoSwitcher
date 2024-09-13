@@ -25,6 +25,8 @@ video3EndTime = 0
 video4StartTime = 0
 video4EndTime = 0
 
+instance = vlc.Instance('--verbose=2')  # Increase verbosity level
+
 
 # Function to loop a video segment between startTime and endTime
 def LoopVideoSegment(video_path):
