@@ -10,7 +10,7 @@ instance = vlc.Instance()
 player = instance.media_player_new()
 
 # Define the video path and time range (in milliseconds)
-videoPath = 'video1_720p.mp4' #Consider renaming
+videoPath = 'video2_720p.mp4' #Consider renaming
 
 video1StartTime = 1000
 video1EndTime = 3000
