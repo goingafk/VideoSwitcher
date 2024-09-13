@@ -26,6 +26,7 @@ video4StartTime = 0
 video4EndTime = 0
 
 instance = vlc.Instance('--verbose=2')  # Increase verbosity level
+instance = vlc.Instance('--vout=opengl')
 
 
 # Function to loop a video segment between startTime and endTime
@@ -38,7 +39,7 @@ def LoopVideoSegment(video_path):
 
     media = instance.media_new(video_path)
     player.set_media(media)
-    player.toggle_fullscreen()
+    player.set_fullscreen(True)
 
     # Start playing the video
     player.play()
