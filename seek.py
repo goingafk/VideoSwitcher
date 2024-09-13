@@ -25,7 +25,7 @@ video3EndTime = 0
 video4StartTime = 0
 video4EndTime = 0
 
-instance = vlc.Instance('--verbose=2')  # Increase verbosity level
+instance = vlc.Instance('--verbose=3')  # Increase verbosity level
 instance = vlc.Instance('--vout=opengl')
 
 
